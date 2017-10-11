@@ -1,7 +1,7 @@
 /* Fonts Styles */
 
 @font-face {
-    font-family: 'Glober_Bold_Free';
+    font-family: 'Glober_bold';
     src: url('../fonts/Glober_Bold_Free-webfont.woff2') format('woff2'),
          url('../fonts/Glober_Bold_Free-webfont.woff') format('woff');
     font-weight: normal;
@@ -9,9 +9,18 @@
 }
 
 @font-face {
-    font-family: 'Glober_Thin_Free';
+    font-family: 'Glober_thin';
     src: url('../fonts/Glober_Thin_Free-webfont.woff2') format('woff2'),
          url('../fonts/Glober_Thin_Free-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glober_regular';
+    src: url('../fonts/globerregular-webfont.woff2') format('woff2'),
+         url('../fonts/globerregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }

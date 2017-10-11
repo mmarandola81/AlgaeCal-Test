@@ -1,5 +1,156 @@
 /* Default Styles */
 
-*, h1, h2, h3, h4, h5, h6, p {
-	font-family: 'Glober_Bold_Free', 'Roboto', serif;
+*, h1, h2, h3, h4, h5, h6, a, span {
+	font-family: 'Glober_bold', 'Roboto', serif;
+	font-weight: 500;
+}
+
+p, div, li {
+	font-family: 'Glober_Regular', 'Roboto', serif;
+	font-weight: 300;
+}
+
+html {
+	min-width: 320px;
+	overflow-x: hidden;
+}
+
+a {
+	color: $algae-aqua;
+	transition: color 0.3s ease;
+}
+
+nav {
+	.nav-logo {
+		max-width: 130px;
+		margin-top: 20px;
+	}
+	ul {
+		margin-top: 20px !important;
+		text-align: right;
+
+		@include xs {
+			text-align: left;
+		}
+
+		li {
+		float: none !important;
+		font-size: 16px;
+
+			&.tap-talk	{
+				font-size: 20px;
+			}
+
+			.fa-stack {
+				width: 1.5em;
+				height: 1.5em;
+				line-height: 1.5em;
+			}
+
+			.fa-stack-2x {
+				font-size: 1.5em;
+			}
+
+			.fa-stack-1x {
+				font-size: 0.9em;
+
+			}
+
+			a {
+				display: inline-block !important;
+				background: transparent !important;
+				color: $algae-aqua;
+				padding: 5px !important;
+
+				@include hover-state {
+					
+					color: darken($algae-aqua, 10%);
+				}
+			}
+		}
+	}
+	
+
+}
+
+#main-header-section {
+	.image-header {
+		min-height: 400px;
+		width: 100%;
+		background-image: url('../img/green-background.png')
+	}
+
+	.header-copy {
+		max-width: 600px;
+		padding: 25px;
+		margin: 0 auto;
+		text-align: center;
+		color: white;
+
+		h1 {
+			text-transform: uppercase;
+			position: relative;
+			width: 230px;
+			margin: 0 auto;
+			font-size: 46px;
+
+			@include m {
+				font-size: 36px;
+			}
+			
+			
+			&:before {
+				content:"";
+				border-bottom: 2px solid white;
+				position: absolute;
+				left: -310px;
+				top: 50%;
+				width: 300px;
+			}
+
+			&:after {
+				content:"";
+				border-bottom: 2px solid white;
+				position: absolute;
+				right: -310px;
+				top: 50%;
+				width: 300px;
+			}
+		}
+
+		h2 {
+			font-size: 32px;
+			line-height: 42px;
+			@include m {
+				font-size: 38px;
+			}
+		}
+	}
+}
+
+.video-wrapper {
+	position: relative;
+	.overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		position: absolute;
+		text-align: center;
+		
+
+		.fa {
+			font-size: 12em !important;
+			color: red;
+			text-shadow: 0 0 10px 10px rgba(black, 0.5);
+		}
+	}
+}
+
+.wistia_responsive_wrapper {
+	background: $gray-lightest;
+	min-height: 200px;
+	
 }

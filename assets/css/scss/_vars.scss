@@ -15,6 +15,11 @@ $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
+$algae-blue:            #43bbff;
+$algae-aqua:            #20c4c7;
+$algae-green:           #40ad4a;
+$algaeu-gray:           #67676E;
+
 @mixin hover-state {
     &:hover, &:active, &:focus {
         @content;
