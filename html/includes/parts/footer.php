@@ -1,4 +1,4 @@
 
-    <script src="http://<?=$_SERVER['SERVER_NAME']?>/inludes/js/script.js"></script>
+    <script src="http://<?=$_SERVER['SERVER_NAME']?>/includes/js/script.js"></script>
   </body>
 </html>

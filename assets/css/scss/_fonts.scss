@@ -1,1 +1,17 @@
 /* Fonts Styles */
+
+@font-face {
+    font-family: 'Glober_Bold_Free';
+    src: url('../fonts/Glober_Bold_Free-webfont.woff2') format('woff2'),
+         url('../fonts/Glober_Bold_Free-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glober_Thin_Free';
+    src: url('../fonts/Glober_Thin_Free-webfont.woff2') format('woff2'),
+         url('../fonts/Glober_Thin_Free-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

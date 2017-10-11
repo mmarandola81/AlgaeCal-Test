@@ -32,7 +32,7 @@ module.exports = function (grunt) {
                 src: [
                     'bower_components/jquery/dist/jquery.min.js',
                     'bower_components/bootstrap/dist/js/bootstrap.min.js',
-                    'assets/js/main.js'
+                    'assets/js/script.js'
                 ],
 
                 dest: 'html/includes/js/script.js'
@@ -72,12 +72,12 @@ module.exports = function (grunt) {
 				files: [
 					'assets/js/script.js'
 					],
-				tasks: ['buildJSApp']
+				tasks: ['build-js']
 			},
 
 			scss: {
 				files: ['assets/css/scss/*.scss', 'app/components/bootstrap/less/*.less'],
-				tasks: ['buildCSS']
+				tasks: ['build-css']
 			}
 		},
 

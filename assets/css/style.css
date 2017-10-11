@@ -1,6 +1,18 @@
 /* Variables */
 /*====================COLORS AND BRANDING COLORS==========================*/
 /* Fonts Styles */
+@font-face {
+  font-family: 'Glober_Bold_Free';
+  src: url("../fonts/Glober_Bold_Free-webfont.woff2") format("woff2"), url("../fonts/Glober_Bold_Free-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Glober_Thin_Free';
+  src: url("../fonts/Glober_Thin_Free-webfont.woff2") format("woff2"), url("../fonts/Glober_Thin_Free-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 /* Default Styles */
+*, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Glober_Bold_Free', 'Roboto', serif; }
 
 /*# sourceMappingURL=style.css.map */

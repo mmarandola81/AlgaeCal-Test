@@ -9,7 +9,8 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="http://<?=$_SERVER['SERVER_NAME']?>/inludes/css/syle.css" rel="stylesheet">
+    <link href="http://<?=$_SERVER['SERVER_NAME']?>/includes/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
