@@ -1,6 +1,6 @@
 /* Default Styles */
 
-*, h1, h2, h3, h4, h5, h6, a, span {
+*, h1, h2, h3, h4, h5, h6, a, span, strong, b {
 	font-family: 'Glober_bold', 'Roboto', serif;
 	font-weight: 500;
 }
@@ -8,6 +8,14 @@
 p, div, li {
 	font-family: 'Glober_Regular', 'Roboto', serif;
 	font-weight: 300;
+}
+
+h4 {
+	color: $algae-dk-aqua;
+}
+
+p.lead {
+	font-size: 200%;
 }
 
 html {
@@ -18,6 +26,12 @@ html {
 a {
 	color: $algae-aqua;
 	transition: color 0.3s ease;
+}
+
+section {
+	margin-bottom: 15px;
+	width: 100%;
+	float: left;
 }
 
 nav {
@@ -36,6 +50,11 @@ nav {
 		li {
 		float: none !important;
 		font-size: 16px;
+		padding: 0;
+
+		@include s {
+			padding: 0 15px;
+		}
 
 			&.tap-talk	{
 				font-size: 20px;
@@ -45,6 +64,10 @@ nav {
 				width: 1.5em;
 				height: 1.5em;
 				line-height: 1.5em;
+			}
+
+			.fa-circle {
+				color: $algae-green;
 			}
 
 			.fa-stack-2x {
@@ -69,13 +92,11 @@ nav {
 			}
 		}
 	}
-	
-
 }
 
 #main-header-section {
 	.image-header {
-		min-height: 400px;
+		min-height: 300px;
 		width: 100%;
 		background-image: url('../img/green-background.png')
 	}
@@ -90,14 +111,14 @@ nav {
 		h1 {
 			text-transform: uppercase;
 			position: relative;
-			width: 230px;
+			width: 295px;
 			margin: 0 auto;
 			font-size: 46px;
 
 			@include m {
 				font-size: 36px;
+				width: 230px;
 			}
-			
 			
 			&:before {
 				content:"";
@@ -119,10 +140,17 @@ nav {
 		}
 
 		h2 {
-			font-size: 32px;
-			line-height: 42px;
+			font-size: 38px;
+			line-height: 55px;
+
+			span {
+				padding-bottom: 2px;
+				border-bottom: 5px solid #e81010;
+			}
+
 			@include m {
-				font-size: 38px;
+				font-size: 32px;
+				line-height: 46px;
 			}
 		}
 	}
@@ -139,12 +167,40 @@ nav {
 		z-index: 1;
 		position: absolute;
 		text-align: center;
+		cursor: pointer;
+
+		.overlay-copy {
+			@include vertical-align;
+			font-size: 20px;
+			color: white;
+
+			.hand_arrow {
+			  background-image: url("../img/hand-arrow.png");
+			     width: 56px;
+			    height: 44px;
+			    display: inline-block;
+			    background-size: 100%;
+			    left: 0;
+			    bottom: 0;
+			    background-repeat: no-repeat;
+			    margin-left: 140px;
+			    margin-right: 10px;
+			}
+		}
 		
 
 		.fa {
-			font-size: 12em !important;
+			font-size: 8em !important;
 			color: red;
 			text-shadow: 0 0 10px 10px rgba(black, 0.5);
+
+			&:after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				background: white;
+				border-radius: 50%;
+			}
 		}
 	}
 }
@@ -153,4 +209,121 @@ nav {
 	background: $gray-lightest;
 	min-height: 200px;
 	
+}
+
+.product-container {
+
+	margin-top: 20px;
+
+	p.most-popular {
+			text-transform: uppercase;
+			visibility: hidden;
+			padding: 5px 10px;
+			text-align: center;
+			color: white;
+			margin-bottom: 0;
+		}
+
+	&.most-popular {
+		background: $algae-dk-aqua;
+		box-shadow: 0 0 5px rgba(black, 0.4);
+		padding: 15px;
+		padding-top: 0;
+
+		p.most-popular {
+			visibility: visible;
+			text-transform: uppercase;
+			padding: 5px 10px;
+			text-align: center;
+			color: white;
+			margin-bottom: 0;
+		}
+	}
+
+	.inner-container {
+		padding: 15px;
+		padding-bottom: 30px;
+		text-align: center;
+		box-shadow: 0 0 5px rgba(black, 0.2);
+		background: white;
+		position: relative;
+
+		.currency-symbol {
+			font-size: 85%;
+
+		}
+
+		.currency {
+		    text-decoration: underline;
+		    font-size: 46%;
+		    vertical-align: middle;
+		    margin-bottom: 6px;
+		    display: inline-block;
+		}
+
+		.product-price-day {
+			font-size: 140%;
+			background-image: url("../img/highlights.png");
+			background-position: center center;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		.btn {
+			background-color: $algae-green;
+			border-color: $algae-dk-aqua;
+			color: white;
+			box-shadow: 0 5px $algae-dk-aqua;
+			position: relative;
+			transition: background-color 0.3s ease;
+
+			@include hover-state {
+				background-color: $algae-dk-aqua;
+			}
+
+			.seal {
+				position: absolute;
+	    		left: -10px;
+	    		top: -12px;
+	    		width: 60px;
+	    		height: auto;
+			}	
+
+		}
+
+		.promo-circle {
+			position: absolute;
+		    right: -40px;
+		    top: -40px;
+		    background: $algae-orange;
+		    color: #fff;
+		    padding: 12px;
+		    text-align: center;
+		    height: 70px;
+		    width: 70px;
+		    border-radius: 50%;
+		    z-index: 2;
+
+		    .percent-off {
+		    	font-size: 20px;
+		    }
+
+		    @include s {
+
+		    }
+		}
+	
+		&.first {
+			.promo-circle {
+				right: auto;
+				left: -40px;
+
+				@include s {
+					left: auto;
+					right: -40px;
+				}
+				
+			}
+		}
+	}
 }

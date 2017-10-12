@@ -17,13 +17,19 @@
   font-weight: normal;
   font-style: normal; }
 /* Default Styles */
-*, h1, h2, h3, h4, h5, h6, a, span {
+*, h1, h2, h3, h4, h5, h6, a, span, strong, b {
   font-family: 'Glober_bold', 'Roboto', serif;
   font-weight: 500; }
 
 p, div, li {
   font-family: 'Glober_Regular', 'Roboto', serif;
   font-weight: 300; }
+
+h4 {
+  color: #008ba4; }
+
+p.lead {
+  font-size: 200%; }
 
 html {
   min-width: 320px;
@@ -32,6 +38,11 @@ html {
 a {
   color: #20c4c7;
   transition: color 0.3s ease; }
+
+section {
+  margin-bottom: 15px;
+  width: 100%;
+  float: left; }
 
 nav .nav-logo {
   max-width: 130px;
@@ -44,13 +55,19 @@ nav ul {
       text-align: left; } }
   nav ul li {
     float: none !important;
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 0; }
+    @media (max-width: 768px) {
+      nav ul li {
+        padding: 0 15px; } }
     nav ul li.tap-talk {
       font-size: 20px; }
     nav ul li .fa-stack {
       width: 1.5em;
       height: 1.5em;
       line-height: 1.5em; }
+    nav ul li .fa-circle {
+      color: #40ad4a; }
     nav ul li .fa-stack-2x {
       font-size: 1.5em; }
     nav ul li .fa-stack-1x {
@@ -64,7 +81,7 @@ nav ul {
         color: #19999b; }
 
 #main-header-section .image-header {
-  min-height: 400px;
+  min-height: 300px;
   width: 100%;
   background-image: url("../img/green-background.png"); }
 #main-header-section .header-copy {
@@ -76,12 +93,13 @@ nav ul {
   #main-header-section .header-copy h1 {
     text-transform: uppercase;
     position: relative;
-    width: 230px;
+    width: 295px;
     margin: 0 auto;
     font-size: 46px; }
     @media (max-width: 992px) {
       #main-header-section .header-copy h1 {
-        font-size: 36px; } }
+        font-size: 36px;
+        width: 230px; } }
     #main-header-section .header-copy h1:before {
       content: "";
       border-bottom: 2px solid white;
@@ -97,11 +115,15 @@ nav ul {
       top: 50%;
       width: 300px; }
   #main-header-section .header-copy h2 {
-    font-size: 32px;
-    line-height: 42px; }
+    font-size: 38px;
+    line-height: 55px; }
+    #main-header-section .header-copy h2 span {
+      padding-bottom: 2px;
+      border-bottom: 5px solid #e81010; }
     @media (max-width: 992px) {
       #main-header-section .header-copy h2 {
-        font-size: 38px; } }
+        font-size: 32px;
+        line-height: 46px; } }
 
 .video-wrapper {
   position: relative; }
@@ -113,14 +135,119 @@ nav ul {
     left: 0;
     z-index: 1;
     position: absolute;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
+    .video-wrapper .overlay .overlay-copy {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: white; }
+      .video-wrapper .overlay .overlay-copy .hand_arrow {
+        background-image: url("../img/hand-arrow.png");
+        width: 56px;
+        height: 44px;
+        display: inline-block;
+        background-size: 100%;
+        left: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        margin-left: 140px;
+        margin-right: 10px; }
     .video-wrapper .overlay .fa {
-      font-size: 12em !important;
+      font-size: 8em !important;
       color: red;
       text-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5); }
+      .video-wrapper .overlay .fa:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: white;
+        border-radius: 50%; }
 
 .wistia_responsive_wrapper {
   background: #e5e5e5;
   min-height: 200px; }
+
+.product-container {
+  margin-top: 20px; }
+  .product-container p.most-popular {
+    text-transform: uppercase;
+    visibility: hidden;
+    padding: 5px 10px;
+    text-align: center;
+    color: white;
+    margin-bottom: 0; }
+  .product-container.most-popular {
+    background: #008ba4;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    padding-top: 0; }
+    .product-container.most-popular p.most-popular {
+      visibility: visible;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      text-align: center;
+      color: white;
+      margin-bottom: 0; }
+  .product-container .inner-container {
+    padding: 15px;
+    padding-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background: white;
+    position: relative; }
+    .product-container .inner-container .currency-symbol {
+      font-size: 85%; }
+    .product-container .inner-container .currency {
+      text-decoration: underline;
+      font-size: 46%;
+      vertical-align: middle;
+      margin-bottom: 6px;
+      display: inline-block; }
+    .product-container .inner-container .product-price-day {
+      font-size: 140%;
+      background-image: url("../img/highlights.png");
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat; }
+    .product-container .inner-container .btn {
+      background-color: #40ad4a;
+      border-color: #008ba4;
+      color: white;
+      box-shadow: 0 5px #008ba4;
+      position: relative;
+      transition: background-color 0.3s ease; }
+      .product-container .inner-container .btn:hover, .product-container .inner-container .btn:active, .product-container .inner-container .btn:focus {
+        background-color: #008ba4; }
+      .product-container .inner-container .btn .seal {
+        position: absolute;
+        left: -10px;
+        top: -12px;
+        width: 60px;
+        height: auto; }
+    .product-container .inner-container .promo-circle {
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      background: #e87b15;
+      color: #fff;
+      padding: 12px;
+      text-align: center;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      z-index: 2; }
+      .product-container .inner-container .promo-circle .percent-off {
+        font-size: 20px; }
+    .product-container .inner-container.first .promo-circle {
+      right: auto;
+      left: -40px; }
+      @media (max-width: 768px) {
+        .product-container .inner-container.first .promo-circle {
+          left: auto;
+          right: -40px; } }
 
 /*# sourceMappingURL=style.css.map */
