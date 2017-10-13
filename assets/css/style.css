@@ -271,6 +271,8 @@ footer {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     background: white;
     position: relative; }
+    .product-container .inner-container img.img-responsive {
+      margin: 0 auto; }
     .product-container .inner-container .currency-symbol {
       font-size: 85%; }
     .product-container .inner-container .currency {
