@@ -2,7 +2,7 @@
 
 *, h1, h2, h3, h4, h5, h6, a, span, strong, b {
 	font-family: 'Glober_bold', 'Roboto', serif;
-	font-weight: 500;
+	font-weight: bold;
 }
 
 p, div, li {
@@ -16,6 +16,7 @@ h4 {
 
 p.lead {
 	font-size: 200%;
+	text-align: center;
 }
 
 html {
@@ -26,6 +27,11 @@ html {
 a {
 	color: $algae-aqua;
 	transition: color 0.3s ease;
+	display: inline-block;
+
+	@include hover-state {
+		color: $algae-dk-aqua;
+	}
 }
 
 section {
@@ -34,17 +40,41 @@ section {
 	float: left;
 }
 
-nav {
+nav, footer {
+
+	.footer-links {
+		margin-top: 20px;
+		text-align: right;
+
+		@include xs {
+			width: 100%;
+			text-align: center; 
+		}
+	}
+
 	.nav-logo {
 		max-width: 130px;
 		margin-top: 20px;
+
+		@include xs {
+			width: 100%;
+			text-align: center;
+			float: none !important;
+		    margin: 0 auto;
+		    margin-top: 20px;
+		    display: block;
+		}
 	}
+
 	ul {
 		margin-top: 20px !important;
 		text-align: right;
 
 		@include xs {
-			text-align: left;
+			margin: 0 !important;
+			margin-top: 20px !important;
+			text-align: center;
+			width: 100%;
 		}
 
 		li {
@@ -92,6 +122,45 @@ nav {
 			}
 		}
 	}
+}
+
+footer {
+	padding: 20px;
+	background: #f4f4f4;
+	color: $algae-gray;
+
+	a {
+		color: $algae-gray;
+		font-family: 'Glober_Regular', 'Roboto', serif;
+		font-weight: 300;
+
+		@include hover-state {
+				color: $algae-aqua;
+		}
+
+	}
+}
+
+.btn {
+	background-color: $algae-green !important;
+	border-color: $algae-dk-aqua !important;
+	color: white;
+	box-shadow: 0 5px $algae-dk-aqua;
+	position: relative;
+	transition: background-color 0.3s ease;
+
+	@include hover-state {
+		background-color: $algae-dk-aqua !important;
+		color: white;
+	}
+
+	.seal {
+		position: absolute;
+		left: -10px;
+		top: -12px;
+		width: 60px;
+		height: auto;
+	}	
 }
 
 #main-header-section {
@@ -193,13 +262,36 @@ nav {
 			font-size: 8em !important;
 			color: red;
 			text-shadow: 0 0 10px 10px rgba(black, 0.5);
+			position: relative;
 
 			&:after {
-				content: "";
-				width: 100%;
-				height: 100%;
-				background: white;
-				border-radius: 50%;
+				font-family: FontAwesome;
+			    content: "\f04b";
+			    color: #fff;
+			    position: absolute;
+			    font-size: 35%;
+			    width: 100%;
+			    height: 100%;
+			    left: 4px;
+			    top: 50px;
+			    vertical-align: middle;
+			}
+
+			@include xs {
+				font-size: 4em !important;
+
+				&:after {
+			    	font-family: FontAwesome;
+				    content: "\f04b";
+				    color: #fff;
+				    position: absolute;
+				    font-size: 35%;
+				    width: 100%;
+				    height: 100%;
+				    left: 1px;
+				    top: 26px;
+				    vertical-align: middle;
+			    }
 			}
 		}
 	}
@@ -269,28 +361,6 @@ nav {
 			background-repeat: no-repeat;
 		}
 
-		.btn {
-			background-color: $algae-green;
-			border-color: $algae-dk-aqua;
-			color: white;
-			box-shadow: 0 5px $algae-dk-aqua;
-			position: relative;
-			transition: background-color 0.3s ease;
-
-			@include hover-state {
-				background-color: $algae-dk-aqua;
-			}
-
-			.seal {
-				position: absolute;
-	    		left: -10px;
-	    		top: -12px;
-	    		width: 60px;
-	    		height: auto;
-			}	
-
-		}
-
 		.promo-circle {
 			position: absolute;
 		    right: -40px;
@@ -326,4 +396,142 @@ nav {
 			}
 		}
 	}
+}
+
+#secondary-info {
+
+	.col-sm-4 {
+		margin-top: 20px;
+
+		@include s {
+			margin-top: 15px;
+		}
+
+		h2, h3 {
+			text-align: center;
+			margin-top: 0;
+		}
+
+		h5 {
+		}
+
+		.well {
+			background-color: white;
+			border: 2px solid black;
+			border-radius: 0;
+			padding: 8px;
+
+			table {
+				margin: 0;
+
+				td {
+					padding: 2px;
+				}
+			}
+
+			table, table p, td, table td small {
+				font-family: 'Glober_bold', 'Roboto', serif !important;
+				font-weight: bold !important;
+
+				td:last-of-type {
+					text-align: right;
+				}
+			}
+		}	
+
+		&.guarantee {
+			.well {
+				padding: 20px;
+				border: none;
+				background: url('../img/green-background.png') center center no-repeat;
+				background-size: cover;
+
+				h2 {
+					color: $algae-orange;
+				}
+
+				img {
+					margin: 0 auto;
+					max-width: 180px;
+
+					&.seal {
+						max-width: 130px;
+						margin-bottom: 20px;
+					}
+				}
+
+				.inner-container {
+					padding: 25px;
+					padding-bottom: 30px;
+					text-align: center;
+					box-shadow: 0 0 5px rgba(black, 0.2);
+					background: white;
+					position: relative;
+				}
+			}
+
+			.signature-text-box {
+				width: 150px;
+				margin: 0 auto;
+
+				h5 {
+					font-size: 20px;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&.as-seen-on {
+			h2 {
+				margin: 0;
+			}
+
+			.well {
+				padding: 0;
+				border: none;
+				background: white;
+				box-shadow: 0 0 5px rgba(black, 0.2);
+
+				.inner-container {
+					padding: 15px;
+					img {
+						width: 100%;
+					}
+
+					.col-xs-4 {
+						padding-right: 0;
+					}
+				}
+ 				
+ 				h2 {
+					background: $algae-dk-green;
+					font-size: 20px;
+					padding: 10px;
+					color: white;
+				}
+			}
+
+			.scientific-refs {
+				padding: 0 20px;
+
+				a.view-full-list {
+					margin-bottom: 25px;
+					font-size: 20px;
+					color: $algae-dk-aqua;
+					text-align: center;
+					display: block;
+				}
+				h3 {
+					color: $algae-dk-aqua;
+				}
+				ol {
+					padding-left: 20px;
+
+					li {
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+	}	
 }

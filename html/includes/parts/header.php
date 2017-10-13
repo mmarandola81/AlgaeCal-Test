@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1" >
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>AlgaeCal</title>
 
@@ -12,6 +12,12 @@
     <link href="http://<?=$_SERVER['SERVER_NAME']?>/includes/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="https://cdn.algaecal.com/wp-content/themes/algaecal/favicon.ico">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.algaecal.com/wp-content/themes/algaecal/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.algaecal.com/wp-content/themes/algaecal/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" href="https://cdn.algaecal.com/wp-content/themes/algaecal/ico/apple-touch-icon.png">
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

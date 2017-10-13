@@ -12,10 +12,8 @@ $( document ).ready(function() {
 			$(this).fadeOut();
 		});
 
-	  // at 10 seconds, do something amazing
 	  video.bind('secondchange', function(s) {
 	    if (s >= 133)  {
-	      // Insert code to do something amazing here
 	      $('#three-container').fadeIn();
 	      $('html, body').animate({
 		        scrollTop: $('#three-container').offset().top
@@ -27,4 +25,22 @@ $( document ).ready(function() {
 	    
 	}});
 
+	$('a.buy-now').click(function() {
+	   $('#three-container').fadeIn();
+       $('html, body').animate({
+	        scrollTop: $('#three-container').offset().top
+	    }, 'slow');
+	});
+
+	$('a.view-full-list').click(function(event) {
+	   event.preventDefault();
+	   $('ol.reference-list li').fadeIn();
+	   $(this).hide();
+
+       
+	});
+
+
 });
+
+
