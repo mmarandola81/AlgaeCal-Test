@@ -9,7 +9,7 @@
     <title>AlgaeCal</title>
 
     <!-- Bootstrap -->
-    <link href="http://<?=$_SERVER['SERVER_NAME']?>/includes/css/style.css" rel="stylesheet">
+    <link href="includes/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -67,11 +67,14 @@
               <ul class="nav navbar-nav pull-right">
                 <li class="tap-talk"><span>Tap to Talk</span> <a href="tel:1-800-820-0184">1-800-820-0184</a></li>
                 <li class="speak-specialist"> 
-                  <span class="fa-stack">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-                  </span>
-                  Speak to our Bone Health Specialists</li>
+                  <a href="tel:1-800-820-0184">
+                    <span class="fa-stack">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                    </span>
+                    Speak to our Bone Health Specialists
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

@@ -39,7 +39,7 @@
               </div>
 		</div>
 	</footer>
-    <script src="http://<?=$_SERVER['SERVER_NAME']?>/includes/js/script.js"></script>
-    <?php require $_SERVER['DOCUMENT_ROOT'] . '/includes/parts/guarantee-modal.php'; ?>
+    <script src="includes/js/script.js"></script>
+    <?php require 'includes/parts/guarantee-modal.php'; ?>
   </body>
 </html>

@@ -84,6 +84,8 @@ nav ul, footer ul {
         padding: 0 15px; } }
     nav ul li.tap-talk, footer ul li.tap-talk {
       font-size: 20px; }
+    nav ul li.speak-specialist a, footer ul li.speak-specialist a {
+      color: black !important; }
     nav ul li .fa-stack, footer ul li .fa-stack {
       width: 1.5em;
       height: 1.5em;

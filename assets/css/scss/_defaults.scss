@@ -90,6 +90,12 @@ nav, footer {
 				font-size: 20px;
 			}
 
+			&.speak-specialist {
+				a {
+					color: black !important;
+				}
+			}
+
 			.fa-stack {
 				width: 1.5em;
 				height: 1.5em;
